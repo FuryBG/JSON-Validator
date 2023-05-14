@@ -24,6 +24,6 @@ try {
     JsonSchemaCheck(schema, object);
 }
 catch(err) {
-    //Error thrown by validator if schema didn't match ne object
+    //Error thrown by validator if schema didn't match the object
 }
 ````
