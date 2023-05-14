@@ -1,6 +1,6 @@
 {
   "name": "json-validator-lightweight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate object against JSON schema",
   "main": "index.js",
   "scripts": {
