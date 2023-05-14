@@ -1,0 +1,27 @@
+{
+  "name": "json-validator-lightweight",
+  "version": "1.0.0",
+  "description": "Validate object against JSON schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuryBG/JSON-Validator.git"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "validator",
+    "lightweight",
+    "json check",
+    "object schema validator"
+  ],
+  "author": "Robart Stoyanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FuryBG/JSON-Validator/issues"
+  },
+  "homepage": "https://github.com/FuryBG/JSON-Validator#readme"
+}
