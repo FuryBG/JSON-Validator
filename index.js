@@ -1,5 +1,4 @@
 let result = true;
-let errorKey = null;
 let errorValue = null;
 
 function checkType(type, actualValue) {
@@ -24,7 +23,7 @@ function JsonSchemaCheck(schema, inputObject) {
 
     recursiveChecker(schemaObj, inputObject);
     if(result != true) {
-        throw new Error(`Schema didn't match with the provided object. Error when resolve ${errorKey} >>>>>>>>>> ${errorValue}`);
+        throw new Error(`Schema didn't match with the provided object. Error when resolve value: ${errorValue} <<<<<<<<<<`);
     }
 }
 
@@ -45,23 +44,28 @@ function recursiveChecker(schemaObj, inputObject) {
             }
         }
         else {
-            errorKey = inputKeys[i];
             errorValue = inputValue;
             return;
         }
     }
 }
-
-JsonSchemaCheck("{\"name\":\"string\",\"age\":\"number\",\"nested\":{\"lastname\":\"string\",\"job\":{\"title\":\"string\", \"salary\":\"number\"}}}", {
-    name: "Pesho",
-    age: 10,
-    nested: {
-        lastname: "Petrov",
-        job: {
-            title: 1,
-            salary: 1000
-        }
-    }
-});
+//USAGE
+// JsonSchemaCheck("{\"name\":\"string\",\"age\":\"number\",\"nested\":{\"lastname\":\"string\",\"job\":{\"title\":\"string\", \"salary\":\"number\"}},\"array\":[\"string\",{\"test\": \"string\"}]}", {
+//     name: "Pesho",
+//     age: 10,
+//     nested: {
+//         lastname: "Petrov",
+//         job: {
+//             title: "Software engineer",
+//             salary: 1000
+//         }
+//     },
+//     array: [
+//         "test",
+//         {
+//             test: "omg"
+//         }
+//     ]
+// });
 
 module.exports = JsonSchemaCheck;
